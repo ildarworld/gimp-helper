@@ -1,0 +1,1 @@
+cp 'adjust_image_for_MPs.py' '/Applications/GIMP-2.10.app/Contents/Resources/lib/gimp/2.0/plug-ins/'
