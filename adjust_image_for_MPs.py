@@ -37,43 +37,6 @@ HIEGHT = 1600
 """
 ===========================FILE SAVERS========================
 """
-"""
-Save file
-"""
-def save_as_jpeg_file(image, layer):
-	image_file_name = pdb.gimp_image_get_filename(image)
-	new_file_name = os.path.splitext(image_file_name)[0]+'.jpg'
-	pdb.file_jpeg_save(
-                    image,
-                    layer,
-                    new_file_name,
-                    new_file_name,
-                    1,  # quality
-                    0,  # smoothing
-                    0,  # optimize
-                    1,  # progressive jpeg
-                    '',  # comment
-                    2,  # sub-sampling
-                    0,  # baseline jpeg
-                    0,  # restart
-                    0  # DCT method
-                    )
-
-
-"""
-Will create an additional PNG file which will have a suffix TR at the end in the same location where
-"""
-
-
-def merge_layers_and_save(image, layer, filename=None):
-	_filename = ''
-	if filename:
-		_filename = pdb.gimp_image_get_uri(image)
-	else:
-		_filename = filename
-	merged_layer = pdb.gimp_image_merge_visible_layers(image, CLIP_TO_IMAGE)
-	save_file(image, merged_layer, _filename)
-
 
 def save_file(image, layer, filename=None):
 	if not filename:
@@ -148,11 +111,6 @@ def add_white_layer(image):
 	pdb.gimp_context_set_background((255, 255, 255))
 	pdb.gimp_drawable_fill(newLayer, gimpfu.BACKGROUND_FILL)
 	image.add_layer(newLayer, 1) #TODO chnage to insert layer
-
-
-def resize_all_layers(image):
-    for layer in image.layers:
-    	pdb.gimp_layer_resize_to_image_size(layer)
 
 
 """
