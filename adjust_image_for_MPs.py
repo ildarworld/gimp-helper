@@ -178,26 +178,12 @@ register(
 	"Ildarworld",
 	"Ildarworld",
 	"2020",
-	"<Image>/Seller Helper/Adjust image for marketplaces ", #Menu path
+	"<Image>/Seller Helper/Adjust image for marketplaces", #Menu path
 	"RGB*, GRAY*", 
 	[
 	],
 	[],
 	adjust_image_for_mps)
-
-register(
-	"python_fu_change_scale_and_save_file_with_transparency_in_separate_file",                           
-	"Adjust image for MP and save file transparetly (separate file)",
-	"Adjust image for MP and save file transparetly (separate file)",
-	"Ildarworld",
-	"Ildarworld",
-	"2020",
-	"<Image>/Seller Helper/Adjust image for MP and save either with transparecny and white background", #Menu path
-	"RGB*, GRAY*", 
-	[
-	],
-	[],
-	change_scale_and_save_file_with_transparency_in_separate_file)
 
 register(
 	"python_fu_change_scale_and_save_file_with_transparecny",                           
@@ -206,11 +192,27 @@ register(
 	"Ildarworld",
 	"Ildarworld",
 	"2020",
-	"<Image>/Seller Helper/Save file with transparency in background", #Menu path
+	"<Image>/Seller Helper/Save the file with transparency in the background", #Menu path
 	"RGB*, GRAY*", 
 	[
 	],
 	[],
 	change_scale_and_save_file_with_transparency)
+
+register(
+	"python_fu_change_scale_and_save_file_with_transparency_in_separate_file",                           
+	"Adjust image for MP and save file transparetly (separate file)",
+	"Adjust image for MP and save file transparetly (separate file)",
+	"Ildarworld",
+	"Ildarworld",
+	"2020",
+	"<Image>/Seller Helper/Adjust image for MP and save as with transparency and as well white background", #Menu path
+	"RGB*, GRAY*", 
+	[
+	],
+	[],
+	change_scale_and_save_file_with_transparency_in_separate_file)
+
+
 
 main()
